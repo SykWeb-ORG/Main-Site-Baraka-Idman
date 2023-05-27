@@ -1,0 +1,144 @@
+.news
+{
+    padding: 50px 0;
+    background-color: $light-gray-color;
+
+    &__top
+    {
+        position: relative;
+        margin-bottom: 30px;
+
+        @include respond-to('medium')
+        {
+            margin-bottom: 150px;
+        }
+
+        &-text
+        {
+            padding: 30px;
+            background-color: $black;
+            color: $white;
+
+            @include respond-to('medium')
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 440px;
+                height: 380px;
+                padding: 50px;
+            }
+        }
+
+        &-first-image
+        {
+            @include respond-to('medium')
+            {
+                position: absolute;
+                top: 40px;
+                left: 35%;
+                z-index: 2;
+                width: 365px;
+            }
+        }
+
+        &-seconde-image
+        {
+            @include respond-to('medium')
+            {
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 1;
+                width: 400px;
+            }
+        }
+    }
+
+    &__posts
+    {
+        &-sidebar
+        {
+            > ul 
+            {
+                list-style: none;
+
+                > li 
+                {
+                    padding: 18px 20px;
+                    background-color: $white;
+                    border-bottom: 1px solid $light-gray-color;
+
+                    a 
+                    {
+                        color: $black;
+                        font-size: 13px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                    }
+                }
+
+                &:last-child
+                {
+                    border-bottom: 0;
+                }
+            }
+
+            .pub
+            {
+                width: 100%;
+                height: 250px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                background-color: $primary-color;
+            }
+        }
+
+        &-listing
+        {
+            > h2 
+            {
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+                border-bottom: 1px solid #e5e5e5;
+            }
+
+            > ul 
+            {
+                padding: 20px;
+                margin-top: 25px;
+                list-style: none;
+                background-color: $white;
+
+                > li 
+                {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    @include respond-to('medium')
+                    {
+                        flex-direction: row;
+                    }
+                    
+                    &:not(:last-of-type)
+                    {
+                        margin-bottom: 30px;
+                    }
+                    
+                    h3 
+                    {
+                        font-size: 26px;
+                        margin-bottom: 25px;
+                    }
+
+                    .date
+                    {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
