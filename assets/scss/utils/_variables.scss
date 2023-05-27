@@ -1,9 +1,16 @@
 //\ Colors
 $white: #fff;
 $black: #000;
+$primary-color: #F48460;
+$secondary-color: #3498DB;
 
 //\ Fonts
 $Poppins: "Poppins";
 $Montaserat: "Montserrat";
 
 //\ Breakpoints
+$breakpoints: (
+  'small':  767px,
+  'medium': 992px,
+  'large':  1200px
+) !default;
