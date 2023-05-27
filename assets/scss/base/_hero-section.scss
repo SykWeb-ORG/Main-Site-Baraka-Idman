@@ -1,0 +1,52 @@
+.hero-section
+{
+    display: flex;
+    align-items: center;
+    background-image: url(../images/hero-section-bg.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+    &__content
+    {
+        color: $white;
+
+        > h2 
+        {
+            font-size: 40px;
+
+            @include respond-to('medium')
+            {
+                width: 50%;
+            }
+        }
+
+        > p 
+        {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            font-weight: 400;
+
+            @include respond-to('medium')
+            {
+                width: 50%;
+            }
+        }
+    }
+
+    &__buttons
+    {
+        margin-top: 35px;
+
+        .btn
+        {
+            text-transform: uppercase;
+
+            &__secondary
+            {
+                margin-right: 10px;
+            }
+        }
+    }
+}
