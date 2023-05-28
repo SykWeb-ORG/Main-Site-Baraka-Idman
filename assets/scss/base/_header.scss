@@ -1,0 +1,89 @@
+.container_alt{
+    padding: 10px 20px 0 20px;
+    background-image: url(../images/hero-section-bg.jpg);
+    background-size: cover;
+    header{
+        margin-top: 20px;
+        background-color: #fff;
+        overflow: hidden;
+        z-index: 100;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+        .main-header{
+            display: flex;
+        }
+        .header-logo{
+            overflow: hidden;
+            float: left;
+            display: block;
+            position: relative;
+            z-index: 99;
+            text-align: center;
+            width: 200px;
+            border-color: #e5e5e5;
+            border-right: 1px solid #000;
+            max-width: 25%;
+            #navtrigger{
+                padding: 10px;
+                height: 42px;
+                width: 42px;
+                background-image: none;
+                margin: 15px 25px 10px 30px;
+                display: none;
+                position: relative;
+                float: right;
+                z-index: 99;
+                text-align: center;
+                color: #fff;
+                background-color: #f48460;
+            }
+            img{
+                width: 100px;
+            }
+        }
+        .header-right {
+            display: flex;
+            width: auto;
+            margin-left: 50px;
+            justify-content: center;
+            align-items: center;
+            .nav-list{
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+                .menu-item{
+                    margin-right: 50px;
+                    a{
+                        color: #000;
+                        text-decoration: none;
+                        font-size: 16px;
+                    }
+                    .sub-menu{
+                        display: none;
+                        flex-direction: column;
+                        width: 210px;
+                        background-color: firebrick;
+                        position: absolute;
+                        list-style: none;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                        z-index: 9;
+                        margin: 0;
+                        padding: 0;
+                        backface-visibility: hidden;
+                        -webkit-backface-visibility: hidden;
+                        li{
+                            margin: 10px 5px;
+                            a{
+                                color: #fff;
+                            }
+                        }
+                    }
+                    &:hover{
+                        .sub-menu{
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
