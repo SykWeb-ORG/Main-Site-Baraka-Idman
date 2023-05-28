@@ -11,6 +11,34 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div class="wrapper" id="wrapper">
+        <div class="close" id="close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="wrapper-list">
+            <li class="wrapper-list-item">
+                <a href="#home">Home</a>
+            </li>
+            <li class="wrapper-list-item">
+                <a href="#newsletter">Newsletter</a>
+            </li>
+            <li class="wrapper-list-item">
+                <a href="#news">News</a>
+            </li>
+            <li class="wrapper-list-item">
+                <a href="#activities">Activities</a>
+            </li>
+            <li class="wrapper-list-item">
+                <a href="#events">Events</a>
+            </li>
+            <li class="wrapper-list-item">
+                <a href="contact-us">Contact</a>
+            </li>
+            <li class="wrapper-list-item">
+                <a href="gallery">Gallery</a>
+            </li>
+        </ul>
+    </div>
     <!--Header Section-->
     <div class="container_alt">
         <header>
@@ -20,9 +48,6 @@
                     <a href="#">
                         <img src="assets/images/LOGO-DROGUES.png" alt="Baraka Idman Association">
                     </a>
-                    <a id="navtrigger" class="rad" href="#">
-                        <i class="fa fa-bars"></i>
-                    </a>
                 </div>
                 <div class="header-right">
                     <nav class="rad tranz">
@@ -31,10 +56,13 @@
                                 class="menu-item">
                                 <a href="#home">Home</a>
                             </li>
+                            <li id="menu-item" class="menu-item"><a
+                                href="#newsletter">Newsletter</a>
+                            </li>
                             <li id="menu-item"
                                 class="menu-item">
                                 <a href="#news">News</a>
-                                <ul class="sub-menu">
+                                <!-- <ul class="sub-menu">
                                     <li id="menu-item"
                                         class="menu-item"><a
                                             href="#civic-news">Civic News</a></li>
@@ -50,22 +78,30 @@
                                         class="menu-item"><a
                                             href="leisure">Leisure</a>
                                     </li>
-                                </ul>
+                                </ul> -->
+                            </li>
+                            <li id="menu-item" class="menu-item">
+                                <a href="#activities">Activities</a>
+                            </li>
+                            <li id="menu-item" class="menu-item">
+                                <a href="upcoming-events">Events</a>
                             </li>
                             <li id="menu-item" class="menu-item"><a
-                                    href="http://dannci.wpmasters.org/association/page-templates-2/contact-us/">Contact</a>
+                                    href="#gallery">Gallery</a>
                             </li>
                             <li id="menu-item" class="menu-item"><a
-                                    href="gallery">Gallery</a></li>
-                            <li id="menu-item" class="menu-item"><a
-                                    href="upcoming-events">Events</a></li>
+                                    href="#contact">Contact</a>
+                            </li>
                         </ul>
                     </nav>
+                    <a id="navtrigger" class="rad" href="#">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </div>
             </div>
         </header>
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" id="home">
         <div class="container hero-section__content">
             <h2>Learn about activities and concerns in the Brookton neighborhood</h2>
             <p>The purpose of the Brookton Civic Association is to promote the civic welfare (to include, but not be limited to, social, economic, environmental, public safety, quality of life, and heritage issues/concerns).</p>
@@ -78,7 +114,7 @@
     </div>
     
     <!-- Newsletter Section -->
-    <section class="newsletter">
+    <section class="newsletter" id="newsletter">
         <div class="container">
             <div class="newsletter__text">
                 <h3>Sign up for our newsletter & stay updated!</h3>
@@ -110,7 +146,7 @@
                     <img src="assets/images/road-863126_1920-o88jr8ilwiippwv9teus83if11z6xhxvrt5n7rk90s.jpg" alt="">
                 </div>
             </div>
-            <div class="row news__posts">
+            <div class="row news__posts" id="news">
                 <div class="news__posts-sidebar col-xs-12 col-md-3">
                     <ul>
                         <li><a href="#">Get Involved</a></li>
@@ -160,7 +196,7 @@
         </div>
     </section>
     <!--Activities Section-->
-    <section class="activities">
+    <section class="activities" id="activities">
         <div class="container">
             <div class="row">
                 <div class="activities__title col-xs-12 col-md-12">
