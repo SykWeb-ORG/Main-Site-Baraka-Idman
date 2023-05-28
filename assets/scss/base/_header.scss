@@ -46,6 +46,10 @@
             margin-left: 50px;
             justify-content: center;
             align-items: center;
+            @include related-to('medium')
+            {
+                display: none;
+            }
             .nav-list{
                 display: flex;
                 flex-direction: row;
