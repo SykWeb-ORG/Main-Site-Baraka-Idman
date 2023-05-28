@@ -1,3 +1,39 @@
+.wrapper{
+    position: fixed;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: #fff;
+    opacity: 0.85;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    .close
+    {
+        font-size: 50px;
+        font-weight: 900;
+        margin-left: 80%;
+    }
+    &-list{
+        list-style: none;
+        &-item{
+            font-size: 30px;
+            margin-bottom: 30px;
+            font-weight: 900;
+            a{
+                color: #000;
+                text-decoration: none;
+            }
+        }
+    }
+}
 .container_alt{
     padding: 10px 20px 0 20px;
     background-image: url(../images/hero-section-bg.jpg);
@@ -5,11 +41,11 @@
     header{
         margin-top: 20px;
         background-color: #fff;
-        overflow: hidden;
         z-index: 100;
         box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
         .main-header{
             display: flex;
+            position: relative;
         }
         .header-logo{
             overflow: hidden;
@@ -18,44 +54,43 @@
             position: relative;
             z-index: 99;
             text-align: center;
-            width: 200px;
+            width: 70%;
             border-color: #e5e5e5;
             border-right: 1px solid #000;
-            max-width: 25%;
-            #navtrigger{
-                padding: 10px;
-                height: 42px;
-                width: 42px;
-                background-image: none;
-                margin: 15px 25px 10px 30px;
-                display: none;
-                position: relative;
-                float: right;
-                z-index: 99;
-                text-align: center;
-                color: #fff;
-                background-color: #f48460;
+            max-width: 70%;
+            @include respond-to('medium'){
+                max-width: 15%;
+                width: 15%;
             }
             img{
-                width: 100px;
+                width: 150px;
+                @include respond-to('medium'){
+                    width: 100px;
+                }
             }
         }
         .header-right {
             display: flex;
             width: auto;
-            margin-left: 50px;
+            margin-left: 30px;
             justify-content: center;
             align-items: center;
-            @include related-to('medium')
-            {
-                display: none;
+            @include respond-to('medium'){
+                margin-left: 50px;
             }
             .nav-list{
                 display: flex;
                 flex-direction: row;
                 list-style: none;
+                @include related-to('small')
+                {
+                    display: none;              
+                }
                 .menu-item{
                     margin-right: 50px;
+                    @include related-to('small'){
+                        margin-bottom: 20px;
+                    }
                     a{
                         color: #000;
                         text-decoration: none;
@@ -86,6 +121,21 @@
                             display: flex;
                         }
                     }
+                }
+            }
+            #navtrigger{
+                padding: 10px;
+                height: 50px;
+                width: 50px;
+                font-size: 30px;
+                background-image: none;
+                float: right;
+                z-index: 99;
+                text-align: center;
+                color: #fff;
+                background-color: #f48460;
+                @include respond-to('small'){
+                    display: none;
                 }
             }
         }
