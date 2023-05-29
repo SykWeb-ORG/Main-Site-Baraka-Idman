@@ -536,4 +536,111 @@ img {
   font-size: 14px;
 }
 
+.contact {
+  padding: 100px 0;
+  background-image: url(../images/megaphone.jpg);
+  background-size: cover;
+}
+.contact__title {
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+@media (min-width: 992px) {
+  .contact__body {
+    display: flex;
+  }
+}
+@media (min-width: 992px) {
+  .contact__body .info {
+    display: flex;
+  }
+}
+.contact__body__form {
+  padding: 25px 40px;
+  background-color: #fff;
+  width: 100%;
+}
+.contact__body__form__desc {
+  margin: 0 0 12px;
+}
+.contact__body__form form {
+  padding: 10px;
+}
+.contact__body__form form .form-group {
+  margin-bottom: 15px;
+}
+.contact__body__form form .form-group input, .contact__body__form form .form-group textarea {
+  width: 100%;
+  font-size: 12px !important;
+  font-style: normal;
+  padding: 15px 3%;
+  margin: 5px 0;
+  overflow: hidden;
+  clear: both;
+  border: 1px solid #efefef;
+}
+.contact__body__form form .form-group textarea {
+  height: 150px !important;
+}
+.contact__body__form form .form-group button {
+  background-color: #F48460;
+  width: 100px !important;
+  padding: 8px !important;
+  margin: 0 !important;
+}
+.contact__body__form__links {
+  clear: both;
+  margin: 16px auto;
+  line-height: 36px;
+  touch-action: manipulation;
+  outline: 0;
+}
+.contact__body__form__links__item {
+  justify-content: center;
+  border: 1px solid;
+  box-shadow: none;
+  border-radius: 5rem;
+  display: inline-flex;
+  font-size: 16px;
+  padding: 0 4px;
+  vertical-align: middle;
+  cursor: pointer;
+  width: 36px;
+  line-height: 36px;
+  height: 36px;
+  color: #000;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 5px;
+}
+.contact__body__form__links__item:hover {
+  border: 1px solid;
+  color: #fff;
+  background: #F48460;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.contact__body__info {
+  margin-left: 0;
+  background: #fff;
+  padding: 25px 40px;
+}
+.contact__body__info p {
+  margin: 0 0 12px;
+}
+.contact__body__info iframe {
+  width: 260px;
+  height: 360px;
+}
+@media (min-width: 992px) {
+  .contact__body__info iframe {
+    width: 450px;
+    height: 360px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
