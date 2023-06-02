@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Baraka IDMan");
+    // Appel du fonction counter
+    counter("counter-1", 5, 80, 3000);
+    counter("counter-2", 10, 85, 3000);
+    counter("counter-3", 0, 92, 3000);
 });  
+//TODO: Essayer de converter ce code en javascript vanilla
 //Show nav in mobile
 const wrapper = document.getElementById('wrapper');
 function toggleDiv() {
@@ -52,3 +56,20 @@ $(document).ready(function () {
     })
 
 });
+
+//Fonction Testimonial
+function counter(id, start, end, duration) {
+    let obj = document.getElementById(id),
+        current = start,
+        range = end - start,
+        increment = end > start ? 1 : -1,
+        step = Math.abs(Math.floor(duration / range)),
+        
+        timer = setInterval(() => {
+            current += increment;
+            obj.textContent = current;
+            if (current == end) {
+                clearInterval(timer);
+            }
+        }, step);
+}

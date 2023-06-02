@@ -1,0 +1,112 @@
+.testimonial
+{
+    padding: 30px 0;
+
+    @include respond-to('medium')
+    {
+        padding: 60px 0;
+    }
+
+    &__wrapper
+    {
+        display: flex;
+        flex-direction: column;
+
+        @include respond-to('medium') 
+        {
+            flex-direction: row;
+        }
+    }
+
+    &__commentaires
+    {
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        padding: 40px;
+
+        &::before
+        {   
+            position: absolute;
+            top: -40px;
+            left: 0;
+            content: "”";
+            font-family: $Poppins;
+            font-size: 180px;
+            color: rgba($black, 0.08);
+        }
+
+        .card-commentaire 
+        {
+            &__content 
+            {
+                margin-bottom: 20px;
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            &__author
+            {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+
+        @include respond-to('medium')
+        {
+            flex: 0 0 70%;
+            max-width: 70%;
+            padding: 80px;
+
+            &::before 
+            {
+                font-size: 300px;
+            }
+        }
+    }
+
+    &__statistic
+    {
+        padding: 40px;
+        background-color: $darker-gray-color;
+        
+        @include respond-to('medium')
+        {
+            flex: 0 0 30%;
+            max-width: 30%;
+        }
+
+        .number
+        {
+            &-wrapper
+            {
+                text-align: center;
+
+                &:not(:last-child)
+                {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &__value,
+            &__prefix
+            {
+                font-family: $Poppins;
+                font-weight: 700;
+                color: $white;
+                font-size: 60px;
+            }
+
+            &__desc
+            {
+                font-family: $Poppins;
+                font-weight: 400;
+                color: $white;
+            }
+        }
+    }
+}
