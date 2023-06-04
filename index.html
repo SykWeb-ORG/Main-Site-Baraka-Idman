@@ -23,25 +23,32 @@
         </div>
         <ul class="wrapper-list">
             <li class="wrapper-list-item">
-                <a href="#home">Home</a>
+                <a href="#home" data-translate="home">Home</a>
             </li>
             <li class="wrapper-list-item">
-                <a href="#newsletter">Newsletter</a>
+                <a href="#newsletter" data-translate="newsletter">Newsletter</a>
             </li>
             <li class="wrapper-list-item">
-                <a href="#news">News</a>
+                <a href="#news" data-translate="news">News</a>
             </li>
             <li class="wrapper-list-item">
-                <a href="#activities">Activities</a>
+                <a href="#activities" data-translate="activities">Activities</a>
             </li>
             <li class="wrapper-list-item">
-                <a href="#events">Events</a>
+                <a href="#events" data-translate="events">Events</a>
             </li>
             <li class="wrapper-list-item">
-                <a href="contact-us">Contact</a>
+                <a href="contact-us" data-translate="contact">Contact</a>
             </li>
             <li class="wrapper-list-item">
-                <a href="gallery">Gallery</a>
+                <a href="gallery" data-translate="gallery">Gallery</a>
+            </li>
+            <li class="wrapper-list-item">
+                <select name="lang" id="langs">
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <option value="es">Espanish</option>
+                </select>
             </li>
         </ul>
     </div>
@@ -59,9 +66,9 @@
                     <nav class="rad tranz">
                         <ul id="main-nav" class="nav-list nav rad">
                             <li id="menu-item" class="menu-item">
-                                <a href="#home">Home</a>
+                                <a href="#home" data-translate="home">Home</a>
                             </li>
-                            <li id="menu-item" class="menu-item"><a href="#newsletter">Newsletter</a>
+                            <li id="menu-item" class="menu-item"><a href="#newsletter" data-translate="newsletter">Newsletter</a>
                             </li>
                             <li id="menu-item" class="menu-item">
                                 <a href="#news">News</a>
@@ -84,14 +91,21 @@
                                 </ul> -->
                             </li>
                             <li id="menu-item" class="menu-item">
-                                <a href="#activities">Activities</a>
+                                <a href="#activities" data-translate="activities">Activities</a>
                             </li>
                             <li id="menu-item" class="menu-item">
-                                <a href="#events">Events</a>
+                                <a href="#events" data-translate="events">Events</a>
                             </li>
-                            <li id="menu-item" class="menu-item"><a href="#gallery">Gallery</a>
+                            <li id="menu-item" class="menu-item"><a href="#gallery" data-translate="gallery">Gallery</a>
                             </li>
-                            <li id="menu-item" class="menu-item"><a href="#contact">Contact</a>
+                            <li id="menu-item" class="menu-item"><a href="#contact" data-translate="contact">Contact</a>
+                            </li>
+                            <li id="menu-item" class="menu-item">
+                                <select name="lang" id="langs-desk">
+                                    <option value="en">En</option>
+                                    <option value="fr">Fr</option>
+                                    <option value="es">Es</option>
+                                </select>
                             </li>
                         </ul>
                     </nav>
@@ -104,13 +118,13 @@
         <!-- Hero Section -->
         <section class="hero-section" id="home">
             <div class="container hero-section__content">
-                <h2>Learn about activities and concerns in the Brookton neighborhood</h2>
-                <p>The purpose of the Brookton Civic Association is to promote the civic welfare (to include, but not be
+                <h2 data-translate="hero_title">Learn about activities and concerns in the Brookton neighborhood</h2>
+                <p  data-translate="hero_desc">The purpose of the Brookton Civic Association is to promote the civic welfare (to include, but not be
                     limited to, social, economic, environmental, public safety, quality of life, and heritage
                     issues/concerns).</p>
                 <div class="hero-section__buttons">
-                    <button class="btn btn__secondary">Learn More</button>
-                    <button class="btn btn__primary">Get Involved</button>
+                    <button class="btn btn__secondary" data-translate="hero_first_btn">Learn More</button>
+                    <button class="btn btn__primary" data-translate="hero_seconde_btn">Get Involved</button>
                 </div>
             </div>
         </section>
@@ -464,11 +478,9 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" type="module"></script>
     <!-- magnific popup js link  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"
-    integrity="sha512-C1zvdb9R55RAkl6xCLTPt+Wmcz6s+ccOvcr6G57lbm8M2fbgn2SUjUJbQ13fEyjuLViwe97uJvwa1EUf4F1Akw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
 </body>
 
 </html>
