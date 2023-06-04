@@ -1,8 +1,20 @@
+import translations from "./translations.js";
+
 document.addEventListener("DOMContentLoaded", () => {
     // Appel du fonction counter
     counter("counter-1", 5, 80, 3000);
     counter("counter-2", 10, 85, 3000);
     counter("counter-3", 0, 92, 3000);
+
+    let defaultLang = localStorage.getItem("lang") ? localStorage.getItem("lang") : "en";
+    setLang(defaultLang);
+    
+    //Languages switcher
+    const selectSwitcher = document.querySelector("#langs-desk");
+    selectSwitcher.addEventListener("change", (e) => {
+        setLang(e.target.value);
+        localStorage.setItem("lang", e.target.value);
+    });
 });  
 //TODO: Essayer de converter ce code en javascript vanilla
 //Show nav in mobile
@@ -72,4 +84,13 @@ function counter(id, start, end, duration) {
                 clearInterval(timer);
             }
         }, step);
+}
+
+//Fonction pour changer la langue du site
+function setLang(langage) {
+    const elementsToTranslate = document.querySelectorAll("[data-translate]");
+    elementsToTranslate.forEach((element) => {
+        const elKey = element.getAttribute("data-translate");
+        element.textContent = translations[langage][elKey];
+    });
 }
