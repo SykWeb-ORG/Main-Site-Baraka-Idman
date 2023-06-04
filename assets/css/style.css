@@ -122,6 +122,47 @@ img {
   color: #222;
   font-size: 13px;
 }
+.container_alt header .top-bar .tagline a {
+  color: #F48460;
+  text-decoration: none;
+}
+.container_alt header .top-bar .tagline a:hover {
+  color: #3498DB;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.container_alt header .top-bar .select {
+  position: relative;
+}
+.container_alt header .top-bar .select__lang {
+  width: fit-content;
+  -webkit-appearance: none;
+  padding: 7px 40px 7px 12px;
+  border-radius: 5px;
+  border: 1px solid #E8EAED;
+  background: white;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 150ms ease;
+  font-size: 16px;
+  box-shadow: 0 1px 3px -2px #9098A9;
+}
+.container_alt header .top-bar .select i {
+  position: absolute;
+  right: 12px;
+  top: 25%;
+  width: 10px;
+  height: 6px;
+  stroke-width: 2px;
+  stroke: #9098A9;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
 .container_alt header .main-header {
   display: flex;
   position: relative;
