@@ -35,14 +35,42 @@
     }
 }
 .container_alt{
-    padding: 10px 20px 0 20px;
+    padding: 0px 150px;
     background-image: url(../images/hero-section-bg.jpg);
     background-size: cover;
+    @include related-to('small'){
+        padding: 0;
+    }
     header{
-        margin-top: 20px;
         background-color: #fff;
         z-index: 100;
         box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+        display: flex;
+        flex-direction: column;
+        .top-bar{
+            background-color: $white;
+            margin: 0;
+            padding: 6px 20px 6px 0;
+            float: left;
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #000;
+            .tagline{
+                margin: 0 25px;
+                padding: 0;
+                float: left;
+                opacity: .7;
+                font-family: Poppins;
+                line-height: 17px;
+                font-weight: 400;
+                font-style: normal;
+                color: #222;
+                font-size: 13px;
+            }
+        }
         .main-header{
             display: flex;
             position: relative;
